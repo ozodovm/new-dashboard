@@ -20,7 +20,9 @@ function Users() {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">Users</h1>
         <Link to="/add-user">
-          <button className="bg-green-500 text-white p-2 rounded">Add user</button>
+          <button className="bg-green-500 text-white p-2 rounded hover:bg-green-600 transition">
+            +Add user
+          </button>
         </Link>
       </div>
       <table className="w-full text-left bg-white shadow-md rounded">
@@ -45,12 +47,14 @@ function Users() {
               <td className="p-4">
                 <button
                   onClick={() => deleteUser(user.id)}
-                  className="bg-red-500 text-white px-2 py-1 rounded mr-2"
+                  className="bg-red-500 text-white px-2 py-1 rounded mr-2 hover:bg-red-600 transition"
                 >
                   Delete
                 </button>
                 <Link to={`/edit-user/${user.id}`}>
-                  <button className="bg-blue-500 text-white px-2 py-1 rounded">Update</button>
+                  <button className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 transition">
+                    Update
+                  </button>
                 </Link>
               </td>
             </tr>

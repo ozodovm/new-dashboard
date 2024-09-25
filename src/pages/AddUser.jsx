@@ -15,41 +15,50 @@ function AddUser() {
   };
 
   return (
-    <div className="bg-white shadow-md p-6 rounded">
-      <h1 className="text-2xl font-bold mb-4">Add User</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={user.name}
-          onChange={(e) => setUser({ ...user, name: e.target.value })}
-          className="w-full p-2 mb-4 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Surname"
-          value={user.surname}
-          onChange={(e) => setUser({ ...user, surname: e.target.value })}
-          className="w-full p-2 mb-4 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Age"
-          value={user.age}
-          onChange={(e) => setUser({ ...user, age: e.target.value })}
-          className="w-full p-2 mb-4 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Address"
-          value={user.address}
-          onChange={(e) => setUser({ ...user, address: e.target.value })}
-          className="w-full p-2 mb-4 border rounded"
-        />
-        <button type="submit" className="bg-green-500 text-white p-2 rounded">
-          Add User
-        </button>
-      </form>
+    <div className="flex items-center justify-center w-full h-[85vh] bg-[#014E56]">
+      <div className="bg-white shadow-lg p-6 rounded-lg w-full max-w-xs">
+        <h1 className="text-xl font-bold mb-4 text-center text-gray-800">Add New User</h1>
+        <form onSubmit={handleSubmit}>
+          <input 
+            required
+            type="text"
+            placeholder="Name"
+            value={user.name}
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
+            className="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            required
+            type="text"
+            placeholder="Surname"
+            value={user.surname}
+            onChange={(e) => setUser({ ...user, surname: e.target.value })}
+            className="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            required
+            type="text"
+            placeholder="Age"
+            value={user.age}
+            onChange={(e) => setUser({ ...user, age: e.target.value })}
+            className="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input 
+            required
+            type="text"
+            placeholder="Address"
+            value={user.address}
+            onChange={(e) => setUser({ ...user, address: e.target.value })}
+            className="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            className="w-full bg-green-500 hover:bg-green-600 text-white p-2 rounded-lg transition-all duration-300"
+          >
+            + Add User
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
